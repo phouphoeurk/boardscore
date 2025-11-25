@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basketball Score</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        width: 600px;
+        height: 400px;
+        border: 3px solid blue;
+        background-color: rgb(6, 6, 69);
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 24px;
+      }
+      .container h1{
+        font-size: 45px;
+      }
+      span[class^="box"] {
+        width: 200px;
+        height: 150px;
+        color: red;
+        font-size: 100px;
+        font-weight: 900;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+      }
+      div[class*="home"] , div[class *="guest"]{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      div[class |= "btn"] button{
+        color: white;
+        width: 50px;
+        height: 30px;
+        border: 1px solid white;
+        background-color: transparent;
+        border-radius: 5px;
+        font-weight: bold;
+        margin: 0 8px;
+        font-family: 'Seven Segment', sans-serif;
+      }
+      @import url('https://fonts.cdnfonts.com/css/seven-segment');
+      .seven-font{
+        font-family: 'Seven Segment', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="home-container">
+        <h1>HOME</h1>
+        <span class="box1 seven-font" id = "team1">15</span>
+        <div class="btn-container ">
+          <button onclick = "homePlus1()">+1</button>
+          <button onclick = "homePlus2()">+2</button>
+          <button onclick = "homePlus3()">+3</button>
+        </div>
+      </div>
+      <div class="guest-container">
+        <h1>GUEST</h1>
+        <span class="box2 seven-font" id = "team2">5</span>
+        <div class="btn-container">
+          <button onclick = "guestPlus1()">+1</button>
+          <button onclick = "guestPlus2()">+2</button>
+          <button onclick = "guestPlus3()">+3</button>
+        </div>
+      </div>
+    </div>
+    <script src="basketball.js">
+        
+    </script>
+  </body>
+</html>
